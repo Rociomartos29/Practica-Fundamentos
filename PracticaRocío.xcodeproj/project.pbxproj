@@ -28,6 +28,13 @@
 		36F53A732B55A8AC004C4B64 /* TransformacionListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F53A712B55A8AC004C4B64 /* TransformacionListViewController.xib */; };
 		36F53A762B55A8D8004C4B64 /* TransfirmacioDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F53A742B55A8D8004C4B64 /* TransfirmacioDetailViewController.swift */; };
 		36F53A772B55A8D8004C4B64 /* TransfirmacioDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F53A752B55A8D8004C4B64 /* TransfirmacioDetailViewController.xib */; };
+		36F53A792B55C250004C4B64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F53A782B55C250004C4B64 /* AppDelegate.swift */; };
+		36F53A7B2B55C287004C4B64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F53A7A2B55C287004C4B64 /* SceneDelegate.swift */; };
+		36F53A7E2B55C3B0004C4B64 /* HeroesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F53A7C2B55C3B0004C4B64 /* HeroesViewController.swift */; };
+		36F53A7F2B55C3B0004C4B64 /* HeroesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F53A7D2B55C3B0004C4B64 /* HeroesViewController.xib */; };
+		36F53A822B55C3D8004C4B64 /* TransformacionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F53A802B55C3D8004C4B64 /* TransformacionViewController.swift */; };
+		36F53A832B55C3D8004C4B64 /* TransformacionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F53A812B55C3D8004C4B64 /* TransformacionViewController.xib */; };
+		36F53A852B55C496004C4B64 /* HeroesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F53A842B55C496004C4B64 /* HeroesService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +79,13 @@
 		36F53A712B55A8AC004C4B64 /* TransformacionListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransformacionListViewController.xib; sourceTree = "<group>"; };
 		36F53A742B55A8D8004C4B64 /* TransfirmacioDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransfirmacioDetailViewController.swift; sourceTree = "<group>"; };
 		36F53A752B55A8D8004C4B64 /* TransfirmacioDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransfirmacioDetailViewController.xib; sourceTree = "<group>"; };
+		36F53A782B55C250004C4B64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		36F53A7A2B55C287004C4B64 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		36F53A7C2B55C3B0004C4B64 /* HeroesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewController.swift; sourceTree = "<group>"; };
+		36F53A7D2B55C3B0004C4B64 /* HeroesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroesViewController.xib; sourceTree = "<group>"; };
+		36F53A802B55C3D8004C4B64 /* TransformacionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformacionViewController.swift; sourceTree = "<group>"; };
+		36F53A812B55C3D8004C4B64 /* TransformacionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransformacionViewController.xib; sourceTree = "<group>"; };
+		36F53A842B55C496004C4B64 /* HeroesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +144,13 @@
 				36F53A2F2B55A733004C4B64 /* ContentView.swift */,
 				36F53A312B55A734004C4B64 /* Assets.xcassets */,
 				36F53A332B55A734004C4B64 /* Preview Content */,
+				36F53A782B55C250004C4B64 /* AppDelegate.swift */,
+				36F53A7A2B55C287004C4B64 /* SceneDelegate.swift */,
+				36F53A7C2B55C3B0004C4B64 /* HeroesViewController.swift */,
+				36F53A7D2B55C3B0004C4B64 /* HeroesViewController.xib */,
+				36F53A802B55C3D8004C4B64 /* TransformacionViewController.swift */,
+				36F53A812B55C3D8004C4B64 /* TransformacionViewController.xib */,
+				36F53A842B55C496004C4B64 /* HeroesService.swift */,
 			);
 			path = "PracticaRocío";
 			sourceTree = "<group>";
@@ -311,6 +332,8 @@
 				36F53A322B55A734004C4B64 /* Assets.xcassets in Resources */,
 				36F53A6A2B55A867004C4B64 /* HeroesListViewController.xib in Resources */,
 				36F53A732B55A8AC004C4B64 /* TransformacionListViewController.xib in Resources */,
+				36F53A7F2B55C3B0004C4B64 /* HeroesViewController.xib in Resources */,
+				36F53A832B55C3D8004C4B64 /* TransformacionViewController.xib in Resources */,
 				36F53A662B55A83D004C4B64 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,15 +359,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36F53A792B55C250004C4B64 /* AppDelegate.swift in Sources */,
 				36F53A6D2B55A886004C4B64 /* HeroeDetailViewController.swift in Sources */,
 				36F53A652B55A83D004C4B64 /* LoginViewController.swift in Sources */,
 				36F53A5B2B55A7E8004C4B64 /* User.swift in Sources */,
 				36F53A692B55A867004C4B64 /* HeroesListViewController.swift in Sources */,
+				36F53A852B55C496004C4B64 /* HeroesService.swift in Sources */,
 				36F53A302B55A733004C4B64 /* ContentView.swift in Sources */,
 				36F53A5F2B55A806004C4B64 /* NetWork.swift in Sources */,
 				36F53A762B55A8D8004C4B64 /* TransfirmacioDetailViewController.swift in Sources */,
+				36F53A7B2B55C287004C4B64 /* SceneDelegate.swift in Sources */,
 				36F53A722B55A8AC004C4B64 /* TransformacionListViewController.swift in Sources */,
+				36F53A7E2B55C3B0004C4B64 /* HeroesViewController.swift in Sources */,
 				36F53A2E2B55A733004C4B64 /* PracticaRoci_oApp.swift in Sources */,
+				36F53A822B55C3D8004C4B64 /* TransformacionViewController.swift in Sources */,
 				36F53A592B55A7DD004C4B64 /* Hero.swift in Sources */,
 				36F53A5D2B55A7F4004C4B64 /* Transformacion.swift in Sources */,
 			);

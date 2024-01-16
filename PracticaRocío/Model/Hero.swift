@@ -6,10 +6,17 @@
 //
 
 import Foundation
-struct Hero: Codable {
-    let id: Int
-    let name: String
-    let description: String
-    let imageURL: String?
+public struct Hero: Codable {
     
+    public let id: Int
+    public let name: String
+    public let description: String
+    public let imageURL: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case description
+        case imageURL
+    }
 }

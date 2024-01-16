@@ -5,58 +5,55 @@
 //  Created by Rocio Martos on 15/1/24.
 //
 
+// HeroDetailViewController.swift
+
 import UIKit
 
 class HeroDetailViewController: UIViewController {
-    // MARK: - Properties
-    private var hero: Hero?
-    private var transformations: [Transformation]?
 
-    // MARK: - Outlets
-    @IBOutlet private weak var heroImageView: UIImageView!
-    @IBOutlet private weak var nameLabel: UILabel!
-    @IBOutlet private weak var descriptionLabel: UILabel!
-    @IBOutlet private weak var transformationsButton: UIButton!
+  // MARK: - Properties
+  private var hero: Hero?
+  private var transformations: [Transformation]?
 
-    // MARK: - Initializers
-    init(hero: Hero, transformations: [Transformation]) {
-        super.init(nibName: nil, bundle: nil)
-        self.hero = hero
-        self.transformations = transformations
+  // MARK: - Outlets
+  @IBOutlet private weak var heroImageView: UIImageView!
+  @IBOutlet private weak var nameLabel: UILabel!
+  @IBOutlet private weak var descriptionLabel: UILabel!
+  @IBOutlet private weak var transformationsButton: UIButton!
+
+  // MARK: - Lifecycle
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    configureUI()
+  }
+
+  // MARK: - Configuration
+  private func configureUI() {
+    guard let hero = hero else { return }
+    
+    nameLabel.text = hero.name
+    descriptionLabel.text = hero.description
+
+    if let imageURL = hero.imageURL {
+        heroImageView.loadImage(from: imageURL)
     }
 
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    transformationsButton.isHidden = transformations?.isEmpty ?? true
+  }
 
-    // MARK: - Lifecycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupUI()
-    }
+  // MARK: - Actions
+  @IBAction private func transformationsTapped(_ sender: UIButton) {
+    showTransformations()
+  }
 
-    // MARK: - UI Setup
-    private func setupUI() {
-        if let hero = hero, let imageURL = hero.imageURL, let image = UIImage(named: imageURL) {
-               heroImageView.image = image
-               nameLabel.text = hero.name
-               descriptionLabel.text = hero.description
-               transformationsButton.isHidden = transformations?.isEmpty ?? true
-           }
+  // MARK: - Navigation
+  private func showTransformations() {
+    guard let hero = hero, let transformations = transformations else {
+      return
     }
+    
+      let vc = TransformationsViewController()
+    navigationController?.pushViewController(vc, animated: true)
+  }
 
-    // MARK: - Actions
-    @IBAction private func transformationsButtonTapped(_ sender: UIButton) {
-        navigateToTransformations()
-    }
-
-    // MARK: - Navigation
-    private func navigateToTransformations() {
-        guard let hero = hero, let transformations = transformations else {
-            return
-        }
-
-        let transformationsViewController = TransformationsViewController(hero: hero, transformations: transformations)
-        navigationController?.pushViewController(transformationsViewController, animated: true)
-    }
 }
