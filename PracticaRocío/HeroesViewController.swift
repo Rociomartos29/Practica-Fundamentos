@@ -9,58 +9,74 @@
 
 import UIKit
 
-class HeroesViewController: UITableViewController {
+class HeroesViewController: UIViewController {
 
-  private var heroes = [Hero]()
+  // MARK: - IBOutlets
+  
+  @IBOutlet weak var tableView: UITableView!
+  
+  // MARK: - Properties
+  
+    private var heroes = [Heroe]()
+  
+  // MARK: - Lifecycle
 
   override func viewDidLoad() {
     super.viewDidLoad()
-
-    // Fetch heroes
-    fetchHeroes()
     
-    // Register cell class
-    tableView.register(UINib(nibName: "HeroCell", bundle: nil), forCellReuseIdentifier: "HeroCell")
+    tableView.dataSource = self
+    tableView.delegate = self
     
-    // Table view setup
-    tableView.rowHeight = 80
+    loadHeroes()
   }
 
-  private func fetchHeroes() {
-    HeroService.shared.fetchHeroes { [weak self] result in
-      guard let self = self else { return }
-      
-      switch result {
-      case .success(let heroes):
-        self.heroes = heroes
-        self.tableView.reloadData()
-        
-      case .failure(let error): break
-        // Show alert with error
-      }
-    }
-  }
-
-  // MARK: - Table view data source
-
-  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return heroes.count
-  }
-
-  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    
-    let cell = tableView.dequeueReusableCell(withIdentifier: "HeroCell", for: indexPath) as! HeroCell
-    let hero = heroes[indexPath.row]
-    cell.configure(with: hero)
-    return cell
-  }
+  // MARK: - Methods
   
-  // Handle tap on row
-  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    private func loadHeroes() {
+        
+        APIService.shared.getHeroes { [weak self] result in
+            
+                switch result {
+                    
+                case .success(let heroes):
+                    self?.heroes = heroes
+                    self?.tableView.reloadData()
+                    
+                case .failure(let error):
+                    print(error) // statement executable
+                    
+                }
+                
+            }
+        }
+    }
+// MARK: - UITableViewDataSource
+
+extension HeroesViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return heroes.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "HeroCell") {
+            // configurar celda
+            return cell
+        } else {
+            return UITableViewCell()
+        }
+        
+    }
+}
+
+// MARK: - UITableViewDelegate
+
+extension HeroesViewController: UITableViewDelegate {
+
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let hero = heroes[indexPath.row]
-    let detailVC = HeroDetailViewController()
-    detailVC.hero = hero
-    navigationController?.pushViewController(detailVC, animated: true)
+    // navegar al detalle del héroe
   }
 
 }

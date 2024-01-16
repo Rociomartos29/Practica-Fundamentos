@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		36F53A2E2B55A733004C4B64 /* PracticaRoci_oApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F53A2D2B55A733004C4B64 /* PracticaRoci_oApp.swift */; };
 		36F53A302B55A733004C4B64 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F53A2F2B55A733004C4B64 /* ContentView.swift */; };
 		36F53A322B55A734004C4B64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36F53A312B55A734004C4B64 /* Assets.xcassets */; };
 		36F53A352B55A734004C4B64 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36F53A342B55A734004C4B64 /* Preview Assets.xcassets */; };
@@ -17,10 +16,8 @@
 		36F53A592B55A7DD004C4B64 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F53A582B55A7DD004C4B64 /* Hero.swift */; };
 		36F53A5B2B55A7E8004C4B64 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F53A5A2B55A7E8004C4B64 /* User.swift */; };
 		36F53A5D2B55A7F4004C4B64 /* Transformacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F53A5C2B55A7F4004C4B64 /* Transformacion.swift */; };
-		36F53A5F2B55A806004C4B64 /* NetWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F53A5E2B55A806004C4B64 /* NetWork.swift */; };
 		36F53A652B55A83D004C4B64 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F53A632B55A83D004C4B64 /* LoginViewController.swift */; };
 		36F53A662B55A83D004C4B64 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F53A642B55A83D004C4B64 /* LoginViewController.xib */; };
-		36F53A692B55A867004C4B64 /* HeroesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F53A672B55A867004C4B64 /* HeroesListViewController.swift */; };
 		36F53A6A2B55A867004C4B64 /* HeroesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F53A682B55A867004C4B64 /* HeroesListViewController.xib */; };
 		36F53A6D2B55A886004C4B64 /* HeroeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F53A6B2B55A886004C4B64 /* HeroeDetailViewController.swift */; };
 		36F53A6E2B55A886004C4B64 /* HeroeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F53A6C2B55A886004C4B64 /* HeroeDetailViewController.xib */; };
@@ -35,6 +32,7 @@
 		36F53A822B55C3D8004C4B64 /* TransformacionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F53A802B55C3D8004C4B64 /* TransformacionViewController.swift */; };
 		36F53A832B55C3D8004C4B64 /* TransformacionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F53A812B55C3D8004C4B64 /* TransformacionViewController.xib */; };
 		36F53A852B55C496004C4B64 /* HeroesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F53A842B55C496004C4B64 /* HeroesService.swift */; };
+		36F53A882B56DEDA004C4B64 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F53A872B56DEDA004C4B64 /* APIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +54,6 @@
 
 /* Begin PBXFileReference section */
 		36F53A2A2B55A733004C4B64 /* PracticaRocío.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PracticaRocío.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		36F53A2D2B55A733004C4B64 /* PracticaRoci_oApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticaRoci_oApp.swift; sourceTree = "<group>"; };
 		36F53A2F2B55A733004C4B64 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		36F53A312B55A734004C4B64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36F53A342B55A734004C4B64 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -68,10 +65,8 @@
 		36F53A582B55A7DD004C4B64 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		36F53A5A2B55A7E8004C4B64 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		36F53A5C2B55A7F4004C4B64 /* Transformacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transformacion.swift; sourceTree = "<group>"; };
-		36F53A5E2B55A806004C4B64 /* NetWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWork.swift; sourceTree = "<group>"; };
 		36F53A632B55A83D004C4B64 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		36F53A642B55A83D004C4B64 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		36F53A672B55A867004C4B64 /* HeroesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesListViewController.swift; sourceTree = "<group>"; };
 		36F53A682B55A867004C4B64 /* HeroesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroesListViewController.xib; sourceTree = "<group>"; };
 		36F53A6B2B55A886004C4B64 /* HeroeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeDetailViewController.swift; sourceTree = "<group>"; };
 		36F53A6C2B55A886004C4B64 /* HeroeDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroeDetailViewController.xib; sourceTree = "<group>"; };
@@ -86,6 +81,7 @@
 		36F53A802B55C3D8004C4B64 /* TransformacionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformacionViewController.swift; sourceTree = "<group>"; };
 		36F53A812B55C3D8004C4B64 /* TransformacionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransformacionViewController.xib; sourceTree = "<group>"; };
 		36F53A842B55C496004C4B64 /* HeroesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesService.swift; sourceTree = "<group>"; };
+		36F53A872B56DEDA004C4B64 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,11 +132,11 @@
 		36F53A2C2B55A733004C4B64 /* PracticaRocío */ = {
 			isa = PBXGroup;
 			children = (
+				36F53A862B56DECA004C4B64 /* API */,
 				36F53A622B55A820004C4B64 /* View */,
 				36F53A612B55A819004C4B64 /* Controller */,
 				36F53A602B55A809004C4B64 /* NetWork */,
 				36F53A572B55A7AF004C4B64 /* Model */,
-				36F53A2D2B55A733004C4B64 /* PracticaRoci_oApp.swift */,
 				36F53A2F2B55A733004C4B64 /* ContentView.swift */,
 				36F53A312B55A734004C4B64 /* Assets.xcassets */,
 				36F53A332B55A734004C4B64 /* Preview Content */,
@@ -193,7 +189,6 @@
 		36F53A602B55A809004C4B64 /* NetWork */ = {
 			isa = PBXGroup;
 			children = (
-				36F53A5E2B55A806004C4B64 /* NetWork.swift */,
 			);
 			path = NetWork;
 			sourceTree = "<group>";
@@ -202,7 +197,6 @@
 			isa = PBXGroup;
 			children = (
 				36F53A632B55A83D004C4B64 /* LoginViewController.swift */,
-				36F53A672B55A867004C4B64 /* HeroesListViewController.swift */,
 				36F53A6B2B55A886004C4B64 /* HeroeDetailViewController.swift */,
 				36F53A702B55A8AC004C4B64 /* TransformacionListViewController.swift */,
 				36F53A742B55A8D8004C4B64 /* TransfirmacioDetailViewController.swift */,
@@ -220,6 +214,14 @@
 				36F53A752B55A8D8004C4B64 /* TransfirmacioDetailViewController.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		36F53A862B56DECA004C4B64 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				36F53A872B56DEDA004C4B64 /* APIService.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,19 +361,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36F53A882B56DEDA004C4B64 /* APIService.swift in Sources */,
 				36F53A792B55C250004C4B64 /* AppDelegate.swift in Sources */,
 				36F53A6D2B55A886004C4B64 /* HeroeDetailViewController.swift in Sources */,
 				36F53A652B55A83D004C4B64 /* LoginViewController.swift in Sources */,
 				36F53A5B2B55A7E8004C4B64 /* User.swift in Sources */,
-				36F53A692B55A867004C4B64 /* HeroesListViewController.swift in Sources */,
 				36F53A852B55C496004C4B64 /* HeroesService.swift in Sources */,
 				36F53A302B55A733004C4B64 /* ContentView.swift in Sources */,
-				36F53A5F2B55A806004C4B64 /* NetWork.swift in Sources */,
 				36F53A762B55A8D8004C4B64 /* TransfirmacioDetailViewController.swift in Sources */,
 				36F53A7B2B55C287004C4B64 /* SceneDelegate.swift in Sources */,
 				36F53A722B55A8AC004C4B64 /* TransformacionListViewController.swift in Sources */,
 				36F53A7E2B55C3B0004C4B64 /* HeroesViewController.swift in Sources */,
-				36F53A2E2B55A733004C4B64 /* PracticaRoci_oApp.swift in Sources */,
 				36F53A822B55C3D8004C4B64 /* TransformacionViewController.swift in Sources */,
 				36F53A592B55A7DD004C4B64 /* Hero.swift in Sources */,
 				36F53A5D2B55A7F4004C4B64 /* Transformacion.swift in Sources */,

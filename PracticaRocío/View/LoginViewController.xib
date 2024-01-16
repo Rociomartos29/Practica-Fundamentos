@@ -11,8 +11,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="PracticaRoci_o" customModuleProvider="target">
             <connections>
                 <outlet property="ContraseñaLabel" destination="wnC-Dt-hXH" id="rPu-jv-bKx"/>
+                <outlet property="Email" destination="5ZL-JJ-kO9" id="rfI-bf-Nt8"/>
                 <outlet property="EmailLogin" destination="5ZL-JJ-kO9" id="Yc0-Ms-BnH"/>
+                <outlet property="ImagenFondo" destination="63y-Bn-thw" id="EdC-yJ-jgU"/>
                 <outlet property="LoginBoton" destination="JlH-3h-INM" id="KkP-jx-WE0"/>
+                <outlet property="Password" destination="wnC-Dt-hXH" id="sFR-y8-TqK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,6 +24,9 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo4" translatesAutoresizingMaskIntoConstraints="NO" id="63y-Bn-thw">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="B3h-MT-flK">
                     <rect key="frame" x="16" y="358.66666666666669" width="361" height="135"/>
                     <subviews>
@@ -29,6 +35,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
+                            <size key="shadowOffset" width="2" height="-1"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contraseña" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wnC-Dt-hXH">
                             <rect key="frame" x="0.0" y="50.333333333333314" width="361" height="20.333333333333329"/>
@@ -40,6 +47,9 @@
                             <rect key="frame" x="0.0" y="100.66666666666663" width="361" height="34.333333333333343"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="filled" title="Continuar"/>
+                            <connections>
+                                <action selector="LoginBoton:forEvent:" destination="-1" eventType="touchUpInside" id="LZF-L5-J4C"/>
+                            </connections>
                         </button>
                     </subviews>
                 </stackView>
@@ -47,15 +57,20 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="63y-Bn-thw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0HY-ZA-qee"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="B3h-MT-flK" secondAttribute="trailing" constant="16" id="5dy-z2-NE0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="63y-Bn-thw" secondAttribute="bottom" id="9K9-2F-Dd7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="63y-Bn-thw" secondAttribute="trailing" id="AfP-TP-BUB"/>
                 <constraint firstItem="B3h-MT-flK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="VpH-MJ-88W"/>
                 <constraint firstItem="B3h-MT-flK" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ady-rK-V4Z"/>
                 <constraint firstItem="B3h-MT-flK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bxM-3M-rEv"/>
+                <constraint firstItem="63y-Bn-thw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="dsC-uB-LLO"/>
             </constraints>
             <point key="canvasLocation" x="28" y="20"/>
         </view>
     </objects>
     <resources>
+        <image name="fondo4" width="1116" height="1941"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -11,7 +11,7 @@ class HeroesListViewController: UIViewController {
     
     // MARK: - Properties
     private let networkService = NetworkService.shared
-    private var heroes: [Hero] = []
+    private var heroes: [Heroe] = []
 
     // MARK: - Outlets
     @IBOutlet private weak var tableView: UITableView!

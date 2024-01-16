@@ -9,14 +9,14 @@ import UIKit
 
 class TransformacionListViewController: UIViewController {
     // MARK: - Properties
-    private var hero: Hero?
+    private var hero: Heroe?
     private var transformations: [Transformation]?
 
     // MARK: - Outlets
     @IBOutlet private weak var tableView: UITableView!
 
     // MARK: - Initializers
-    init(hero: Hero, transformations: [Transformation]) {
+    init(hero: Heroe, transformations: [Transformation]) {
         super.init(nibName: nil, bundle: nil)
         self.hero = hero
         self.transformations = transformations
@@ -71,4 +71,4 @@ extension TransformacionListViewController: UITableViewDelegate {
     }
     */
 
-}
+

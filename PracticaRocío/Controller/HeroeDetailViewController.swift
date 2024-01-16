@@ -12,7 +12,7 @@ import UIKit
 class HeroDetailViewController: UIViewController {
 
   // MARK: - Properties
-  private var hero: Hero?
+  private var hero: Heroe?
   private var transformations: [Transformation]?
 
   // MARK: - Outlets
@@ -20,40 +20,39 @@ class HeroDetailViewController: UIViewController {
   @IBOutlet private weak var nameLabel: UILabel!
   @IBOutlet private weak var descriptionLabel: UILabel!
   @IBOutlet private weak var transformationsButton: UIButton!
+    var heroId: Int!
+     
+     // MARK: - Lifecycle
 
-  // MARK: - Lifecycle
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    configureUI()
-  }
+     override func viewDidLoad() {
+       super.viewDidLoad()
+       
+       loadHeroDetails()
+     }
 
-  // MARK: - Configuration
-  private func configureUI() {
-    guard let hero = hero else { return }
-    
-    nameLabel.text = hero.name
-    descriptionLabel.text = hero.description
+     // MARK: - Methods
 
-    if let imageURL = hero.imageURL {
-        heroImageView.loadImage(from: imageURL)
-    }
+     func loadHeroDetails() {
+     
+       APIService.shared.getHero(id: heroId) { [weak self] result in
+       
+           switch result {
 
-    transformationsButton.isHidden = transformations?.isEmpty ?? true
-  }
+               case .success(let hero):
+               self?.updateUI(with: hero)
 
-  // MARK: - Actions
-  @IBAction private func transformationsTapped(_ sender: UIButton) {
-    showTransformations()
-  }
+               case .failure(let error):
+                 print(error) // statement executable
 
-  // MARK: - Navigation
-  private func showTransformations() {
-    guard let hero = hero, let transformations = transformations else {
-      return
-    }
-    
-      let vc = TransformationsViewController()
-    navigationController?.pushViewController(vc, animated: true)
-  }
+             }
 
-}
+           }
+     
+     }
+     
+     func updateUI(with hero: Heroe) {
+       nameLabel.text = hero.nombre
+       descriptionLabel.text = hero.descripcion
+     }
+
+   }

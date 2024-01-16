@@ -45,7 +45,7 @@ class HeroService {
     }.resume()
   }
 
-  func fetchHeroes(completion: @escaping (Result<[Hero], Error>) -> Void) {
+  func fetchHeroes(completion: @escaping (Result<[Heroe], Error>) -> Void) {
     
     // Call API
     let url = URL(string: "https://dragonball.keepcoding.education/api/heros/all")!
@@ -57,7 +57,7 @@ class HeroService {
         return
       }
 
-      guard let data = data, let heroes = try? JSONDecoder().decode([Hero].self, from: data) else {
+      guard let data = data, let heroes = try? JSONDecoder().decode([Heroe].self, from: data) else {
         completion(.failure(URLError(.badServerResponse)))
         return
       }
